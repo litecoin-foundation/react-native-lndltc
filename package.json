@@ -1,7 +1,7 @@
 {
   "name": "@litecoinfoundation/react-native-lndltc",
   "title": "react-native-lndltc",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "React Native library for Lightning Litecoin",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -39,8 +39,7 @@
   "license": "MIT",
   "licenseFilename": "LICENSE",
   "peerDependencies": {
-    "react": "^16.8.1",
-    "react-native": ">=0.60.0-rc.0 <1.0.x"
+    "react-native": "0.68.2"
   },
   "devDependencies": {
     "@react-native-community/eslint-config": "^2.0.0",
