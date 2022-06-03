@@ -1,3 +1,5 @@
+import groovy.json.JsonSlurper
+
 // android/build.gradle
 
 // based on:
@@ -30,16 +32,13 @@ buildscript {
     if (project == rootProject) {
         repositories {
             google()
-            jcenter()
+            mavenCentral()
         }
         dependencies {
             classpath 'com.android.tools.build:gradle:3.4.1'
         }
     }
 }
-
-apply plugin: 'com.android.library'
-apply plugin: 'maven'
 
 android {
     compileSdkVersion safeExtGet('compileSdkVersion', DEFAULT_COMPILE_SDK_VERSION)
@@ -56,8 +55,6 @@ android {
 }
 
 repositories {
-    // ref: https://www.baeldung.com/maven-local-repository
-    mavenLocal()
     maven {
         // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
         url "$rootDir/../node_modules/react-native/android"
@@ -67,17 +64,17 @@ repositories {
         url "$rootDir/../node_modules/jsc-android/dist"
     }
     google()
-    jcenter()
+    mavenCentral()
 }
 
 dependencies {
     //noinspection GradleDynamicVersion
     implementation 'com.facebook.react:react-native:+'  // From node_modules
-    compileOnly files('libs/Lndmobile.aar')
+    compileOnly files("$rootDir/../lightning/Lndmobile.aar")
 }
 
 def configureReactNativePom(def pom) {
-    def packageJson = new groovy.json.JsonSlurper().parseText(file('../package.json').text)
+    def packageJson = new JsonSlurper().parseText(file('../package.json').text)
 
     pom.project {
         name packageJson.title
@@ -94,13 +91,6 @@ def configureReactNativePom(def pom) {
                 distribution 'repo'
             }
         }
-
-//        developers {
-//            developer {
-//                id packageJson.author.username
-//                name packageJson.author.name
-//            }
-//        }
     }
 }
 
