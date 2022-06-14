@@ -5,8 +5,9 @@ import { ENetworks, TLndConf, TLndConfSection } from './types';
 const defaultRegtestConf = {
 	'Application Options': {
 		debuglevel: 'info',
-		'no-macaroons': false,
-		nolisten: true
+		nolisten: true,
+		tlsdisableautofill: true,
+		norest: true
 	},
 	Routing: {
 		'routing.assumechanvalid': true
@@ -31,9 +32,10 @@ const defaultRegtestConf = {
 const defaultTestnetLitecoindConf = {
 	'Application Options': {
 		debuglevel: 'info',
-		'no-macaroons': false,
 		maxbackoff: '2s',
-		nolisten: true
+		nolisten: true,
+		tlsdisableautofill: true,
+		norest: true
 	},
 	Routing: {
 		'routing.assumechanvalid': true
@@ -51,9 +53,10 @@ const defaultTestnetLitecoindConf = {
 const defaultMainnetLitecoindConf = {
 	'Application Options': {
 		debuglevel: 'info',
-		'no-macaroons': false,
 		maxbackoff: '2s',
-		nolisten: true
+		nolisten: true,
+		tlsdisableautofill: true,
+		norest: true
 	},
 	Routing: {
 		'routing.assumechanvalid': true
