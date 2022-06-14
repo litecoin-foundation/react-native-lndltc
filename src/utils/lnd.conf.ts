@@ -61,7 +61,8 @@ const defaultMainnetLitecoindConf = {
 	Litecoin: {
 		'litecoin.active': true,
 		'litecoin.mainnet': true,
-		'litecoin.node': 'neutrino'
+		'litecoin.node': 'neutrino',
+		'litecoin.dnsseed': 'lseed.lightning.loshan.co.uk'
 	},
 	Neutrino: {
 		'neutrino.connect': '178.62.46.195:9333'
