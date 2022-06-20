@@ -15,6 +15,7 @@ import { bytesToHexString, hexStringToBytes, stringToBytes } from './utils/helpe
 import { ss_lnrpc } from './index';
 import StateService from './services/stateservice';
 import WalletUnlocker from './services/walletunlocker';
+import WatchtowerClient from './services/wtclient';
 
 class LND {
 	private readonly grpc: GrpcAction;
@@ -22,6 +23,7 @@ class LND {
 	private currentConf?: LndConf = undefined;
 	readonly stateService: StateService;
 	readonly walletUnlocker: WalletUnlocker;
+	readonly watchtowerClient: WatchtowerClient;
 
 	/**
 	 * Array of callbacks to be fired off when a new log entry arrives.
@@ -36,6 +38,7 @@ class LND {
 		this.grpc = new GrpcAction(this.lnd);
 		this.stateService = new StateService(this.grpc);
 		this.walletUnlocker = new WalletUnlocker(this.grpc);
+		this.watchtowerClient = new WatchtowerClient(this.grpc);
 		this.logListeners = [];
 
 		this.grpc.lndEvent.addListener(EStreamEventTypes.Logs, this.processLogListeners.bind(this));

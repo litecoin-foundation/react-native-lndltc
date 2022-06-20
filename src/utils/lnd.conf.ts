@@ -69,6 +69,9 @@ const defaultMainnetLitecoindConf = {
 	},
 	Neutrino: {
 		'neutrino.connect': '178.62.46.195:9333'
+	},
+	wtclient: {
+		'wtclient.active': true
 	}
 };
 

@@ -24,10 +24,11 @@
     "watch": "npm run build -- -w",
     "lint": "npm run lint:ts",
     "lint:ts": "eslint . --ext .ts,.tsx --fix",
-    "protobuf": "npm run protobuf:rpc && npm run protobuf:walletunlocker &&  npm run protobuf:stateservice",
+    "protobuf": "npm run protobuf:rpc && npm run protobuf:walletunlocker && npm run protobuf:stateservice && npm run protobuf:wtclient",
     "protobuf:rpc": "mkdir -p dist/protos && pbjs -t static-module -w commonjs -o dist/protos/rpc.js src/protos/rpc.proto && pbjs -t static-module src/protos/rpc.proto | pbts -o dist/protos/rpc.d.ts - && cp dist/protos/rpc.* ./src/protos/",
     "protobuf:walletunlocker": "mkdir -p dist/protos && pbjs -t static-module -w commonjs -o dist/protos/walletunlocker.js src/protos/walletunlocker.proto && pbjs -t static-module src/protos/walletunlocker.proto | pbts -o dist/protos/walletunlocker.d.ts - && cp dist/protos/walletunlocker.* ./src/protos/",
     "protobuf:stateservice": "mkdir -p dist/protos && pbjs -t static-module -w commonjs -o dist/protos/stateservice.js src/protos/stateservice.proto && pbjs -t static-module src/protos/stateservice.proto | pbts -o dist/protos/stateservice.d.ts - && cp dist/protos/stateservice.* ./src/protos/",
+    "protobuf:wtclient": "mkdir -p dist/protos && pbjs -t static-module -w commonjs -o dist/protos/wtclient.js src/protos/wtclient.proto && pbjs -t static-module src/protos/wtclient.proto | pbts -o dist/protos/wtclient.d.ts - && cp dist/protos/wtclient.* ./src/protos/",
     "prepublish": "npm run lint && npm run build && npm --no-git-tag-version version patch"
   },
   "repository": {

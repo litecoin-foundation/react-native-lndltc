@@ -51,7 +51,12 @@ export enum EGrpcSyncMethods {
 	StopDaemon = 'StopDaemon',
 	ModifyStatus = 'ModifyStatus',
 	UpdateChannelPolicy = 'UpdateChannelPolicy',
-	BakeMacaroon = 'BakeMacaroon'
+	BakeMacaroon = 'BakeMacaroon',
+	AddTower = 'AddTower',
+	GetTowerInfo = 'GetTowerInfo',
+	ListTowers = 'ListTowers',
+	RemoveTower = 'RemoveTower',
+	Stats = 'Stats'
 }
 
 export enum EGrpcStreamMethods {
