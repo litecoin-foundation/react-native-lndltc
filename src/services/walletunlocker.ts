@@ -2,6 +2,7 @@ import GrpcAction from '../grpc';
 import { err, ok, Result } from '../utils/result';
 import { EGrpcSyncMethods } from '../utils/types';
 import { lnrpc, wu_lnrpc } from '../';
+import { wtclientrpc } from '../protos/wtclient';
 import { hexStringToBytes, stringToBytes } from '../utils/helpers';
 
 class WalletUnlocker {
