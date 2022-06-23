@@ -1,7 +1,7 @@
 {
   "name": "@litecoinfoundation/react-native-lndltc",
   "title": "react-native-lndltc",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "React Native library for Lightning Litecoin",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
