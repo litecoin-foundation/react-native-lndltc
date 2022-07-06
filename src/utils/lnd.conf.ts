@@ -35,7 +35,9 @@ const defaultTestnetLitecoindConf = {
 		maxbackoff: '2s',
 		nolisten: true,
 		tlsdisableautofill: true,
-		norest: true
+		norest: true,
+		maxchansize: 2000000000,
+		'accept-amp': true
 	},
 	Routing: {
 		'routing.assumechanvalid': true
@@ -47,6 +49,12 @@ const defaultTestnetLitecoindConf = {
 	},
 	Neutrino: {
 		'neutrino.connect': '178.62.46.1955:19333'
+	},
+	wtclient: {
+		'wtclient.active': true
+	},
+	protocol: {
+		'protocol.wumbo-channels': true
 	}
 };
 
@@ -56,7 +64,9 @@ const defaultMainnetLitecoindConf = {
 		maxbackoff: '2s',
 		nolisten: true,
 		tlsdisableautofill: true,
-		norest: true
+		norest: true,
+		maxchansize: 2000000000,
+		'accept-amp': true
 	},
 	Routing: {
 		'routing.assumechanvalid': true
@@ -72,6 +82,9 @@ const defaultMainnetLitecoindConf = {
 	},
 	wtclient: {
 		'wtclient.active': true
+	},
+	protocol: {
+		'protocol.wumbo-channels': true
 	}
 };
 
