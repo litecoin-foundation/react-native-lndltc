@@ -612,6 +612,24 @@ class LND {
 	}
 
 	/**
+	 * LND PendingChannels
+	 * @returns {Promise<Ok<lnrpc.PendingChannelsResponse> | Err<unknown>>}
+	 */
+	async listPendingChannels(): Promise<Result<lnrpc.PendingChannelsResponse>> {
+		try {
+			const message = lnrpc.PendingChannelsRequest.create();
+			const serializedResponse = await this.grpc.sendCommand(
+				EGrpcSyncMethods.PendingChannels,
+				lnrpc.PendingChannelsRequest.encode(message).finish()
+			);
+
+			return ok(lnrpc.PendingChannelsResponse.decode(serializedResponse));
+		} catch (e) {
+			return err(e);
+		}
+	}
+
+	/**
 	 * LND DecodePaymentRequest (Invoice)
 	 * @param invoice
 	 * @returns {Promise<Ok<lnrpc.PayReq> | Err<unknown>>}
