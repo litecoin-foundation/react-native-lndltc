@@ -40,14 +40,14 @@
   "license": "MIT",
   "licenseFilename": "LICENSE",
   "peerDependencies": {
-    "react-native": "^0.68.2"
+    "react-native": "^0.71.0"
   },
   "devDependencies": {
-    "@react-native-community/eslint-config": "^2.0.0",
-    "@types/react-native": "0.68.2",
+    "@react-native-community/eslint-config": "^3.0.0",
+    "@types/react-native": "0.71.0",
     "@typescript-eslint/eslint-plugin": "^5.30.5",
     "@typescript-eslint/parser": "^5.30.5",
-    "eslint": "^7.32.0",
+    "eslint": "^8.19.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "6.11.0",
     "eslint-config-standard-with-typescript": "18.0.2",
@@ -64,7 +64,7 @@
     "@babel/runtime": "^7.18.0",
     "base64-js": "^1.5.1",
     "protobufjs": "^6.11.4",
-    "react-native-fs": "^2.20.0",
+    "react-native-fs": "^2.18.0",
     "react-native-zip-archive": "^6.1.0"
   },
   "bugs": {
