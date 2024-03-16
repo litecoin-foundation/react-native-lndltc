@@ -48,7 +48,7 @@ const defaultTestnetLitecoindConf = {
 		'litecoin.node': 'neutrino'
 	},
 	Neutrino: {
-		'neutrino.connect': '178.62.46.1955:19333'
+		'neutrino.connect': '88.198.50.4:19335'
 	},
 	wtclient: {
 		'wtclient.active': true
@@ -66,7 +66,8 @@ const defaultMainnetLitecoindConf = {
 		tlsdisableautofill: true,
 		norest: true,
 		maxchansize: 2000000000,
-		'accept-amp': true
+		'accept-amp': true,
+		feeurl: 'https://litecoinspace.org/api/v1/fees/recommended-lnd'
 	},
 	Routing: {
 		'routing.assumechanvalid': true
@@ -78,7 +79,7 @@ const defaultMainnetLitecoindConf = {
 		'litecoin.dnsseed': 'lseed.lightning.loshan.co.uk'
 	},
 	Neutrino: {
-		'neutrino.connect': '178.62.46.195:9333'
+		'neutrino.connect': '88.198.50.4:9333'
 	},
 	wtclient: {
 		'wtclient.active': true
