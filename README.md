@@ -1,17 +1,12 @@
 # react-native-lndltc
 
-:warning: This is pre-alpha software. Please use at your own risk.
-
-
 ### Description
 This library simplies React Native apps adding [LNDltc](https://github.com/ltcsuite/lnd) integration.
 
 ## Getting started
 
 ```bash
-npm i -s @litecoinfoundation/react-native-lndltc
-#or
-yarn add @litecoinfoundation/react-native-lndltc
+bun i @litecoinfoundation/react-native-lndltc
 ````
 
 ### iOS installation
@@ -96,9 +91,7 @@ lnd.subscribeToOnChainTransactions(
 Initial neutrino sync times can take a while for first time users. This is a trusted setup that allows the app to download a cached pre-synced archive of the neutrino headers. This speeds up the time it takes for LND to become usable as syncing doesn't need to start from scratch.
 ```bash
 #Add these dependencies to your app
-yarn add react-native-fs react-native-zip-archive  
-#or
-npm i react-native-fs react-native-zip-archive -S 
+bun i react-native-fs react-native-zip-archive   
 
 cd ios && pod install && cd ../
 ````
