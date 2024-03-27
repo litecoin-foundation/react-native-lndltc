@@ -67,7 +67,8 @@ const defaultMainnetLitecoindConf = {
 		norest: true,
 		maxchansize: 2000000000,
 		'accept-amp': true,
-		feeurl: 'https://litecoinspace.org/api/v1/fees/recommended-lnd'
+		feeurl: 'https://litecoinspace.org/api/v1/fees/recommended-lnd',
+		'sync-freelist': true
 	},
 	Routing: {
 		'routing.assumechanvalid': true
@@ -79,10 +80,10 @@ const defaultMainnetLitecoindConf = {
 		'litecoin.dnsseed': 'lseed.lightning.loshan.co.uk'
 	},
 	Neutrino: {
-		'neutrino.connect': '88.198.50.4:9333'
+		'neutrino.addpeer': '88.198.50.4:9333'
 	},
 	wtclient: {
-		'wtclient.active': true
+		'wtclient.active': false
 	},
 	protocol: {
 		'protocol.wumbo-channels': true

@@ -24,7 +24,7 @@ class NeutrinoCache {
 	};
 
 	downloadCache = async (network: ENetworks): Promise<Result<boolean>> => {
-		const url = 'https://api.getplasma.org/files/neutrinocache/';
+		const url = 'https://github.com/litecoin-foundation/neutrinocache/releases/download/v0.0.1/';
 		const zipFile = `${network}.zip`;
 		const newFile = 'cache.zip';
 		const saveZipTo = `${RNFS.DocumentDirectoryPath}/${newFile}`;
